@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap");
+:root {
+   --rose-color: rgb(233, 75, 75);
+   --section-color: rgb(248, 249, 250);
+}
+
+section {
+   padding: 80px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Montserrat", sans-serif;
+   
+}
+
+body {
+   font-family: "Nunito Sans", sans-serif;
+}
+
+.color-rose {
+   color: var(--rose-color);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+   color: var(--rose-color)  !important;
+   font-weight: 900;
+ 
+}
+.navbar{
+   background-color: rgba(63, 63, 63, 0.2) !important;
+   box-shadow: 2px 2px 20px black !important;
+   
+}
+.collapse ul li a
+{
+   color: white !important;
+}
+
+.setting {
+   position: fixed;
+   top: 30%;
+   left: 0;
+   z-index: 99;
+   background-color: #000;
+   color: #fff;
+   padding: 5px 10px;
+   border-radius: 0 5px 5px 0;
+}
+
+.main-btn {
+   all: unset;
+   cursor: pointer;
+   background-color: var(--rose-color);
+   padding: 10px 25px;
+   border-radius: 5px;
+   display: inline-block;
+   color: #fff;
+   text-transform: uppercase;
+}
+
+.up-home {
+   position: fixed;
+   z-index: 9999;
+   bottom: 10px;
+   right: 10px;
+   color: #fff;
+   background-color: var(--rose-color);
+   width: 30px;
+   height: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 5px;
+   text-decoration: none;
+}
+
+#home {
+   position: relative;
+   z-index: 1;
+}
+
+#home .carousel-item:nth-child(1) {
+   background: linear-gradient(to top, rgba(0 0 0 / 0.8) 15%, rgba(0 0 0 / 0.5) 20%),
+      url("../images/header-bg.jpg") center fixed no-repeat;
+   background-size: cover;
+}
+
+#home .carousel-item:nth-child(2) {
+   background: linear-gradient(to top, rgba(0 0 0 / 0.8) 15%, rgba(0 0 0 / 0.5) 20%), url("../images/about.jpg") center fixed no-repeat;
+
+   background-size: cover;
+}
+
+#home .carousel-item .text {
+   position: relative;
+   left: 100%;
+   transition: 1s;
+}
+
+#home .carousel-item.active .text {
+   left: 0;
+}
+
+#home .download {
+   all: unset;
+   display: inline-block;
+   padding: 15px 25px;
+   border: 3px solid #fff;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+
+#home .download:hover {
+   background-color: #fff;
+   color: #000;
+}
+
+.scroll {
+   width: 30px;
+   height: 50px;
+   border: 2px solid #fff;
+   position: absolute;
+   z-index: 9999;
+   bottom: 30px;
+   left: 50%;
+   transform: translateX(-50%);
+   border-radius: 50px;
+   animation: bounce 1s linear infinite;
+}
+
+
+
+.scroll::after {
+   content: "";
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 5px;
+   height: 15px;
+   background-color: #fff;
+}
+
+@keyframes bounce {
+   0% {
+      bottom: 30px;
+   }
+   50% {
+      bottom: 60px;
+   }
+   100% {
+      bottom: 30px;
+   }
+}
+
+#about .social li{
+   width: 35px;
+   height: 35px;
+   color: var(--rose-color);
+   border: 2px solid #aaa;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+}
+
+#about .social li:hover  {
+  
+   cursor: pointer;
+   transition: all 0.5s;
+   border-color: var(--rose-color);
+   color: white;
+   background-color: var(--rose-color) ;
+
+}
+
+
+
+#services {
+   background-color: var(--section-color);
+}
+
+#services h3 {
+   position: relative;
+}
+
+#services h3::after {
+   content: "";
+   width: 50px;
+   height: 2px;
+   background-color: var(--rose-color);
+   position: absolute;
+   top: calc(100% + 5px);
+   left: 50%;
+   transform: translateX(-50%);
+   transition: width 0.5s;
+}
+
+#services .card:hover h3::after {
+   width: 100px;
+}
+
+#client {
+   background-color: var(--section-color);
+}
+
+#client .carousel-indicators [data-bs-target] {
+   all: unset;
+   width: 15px;
+   height: 5px;
+   background-color: var(--rose-color);
+   margin-inline: 2px;
+   opacity: 0.7;
+   cursor: pointer;
+   border-radius: 50px;
+   transition: 0.5s;
+}
+
+#client .carousel-indicators .active {
+   opacity: 1;
+   width: 30px;
+}
+
+#client .carousel-item span,
+#client .carousel-item img,
+#client .carousel-item blockquote,
+#client .carousel-item p {
+   display: block;
+   transform: scale(0);
+   transition: 0.5s;
+}
+
+#client .carousel-item span {
+   transition-delay: 0.5s;
+}
+
+#client .carousel-item img {
+   transition-delay: 0.7s;
+}
+
+#client .carousel-item blockquote {
+   transition-delay: 1s;
+}
+
+#client .carousel-item.active span,
+#client .carousel-item.active img,
+#client .carousel-item.active blockquote,
+#client .carousel-item.active p {
+   transform: scale(1);
+}
+
+#portfolio .nav-pills .nav-link.active,
+#portfolio .nav-pills .nav-link:hover {
+   background-color: var(--rose-color);
+   color: #fff;
+}
+
+#portfolio .nav-pills .nav-link {
+   padding: 2px 15px;
+   border-radius: 50px;
+   color: #000;
+   transition: background-color 0.5s, color 0.5s;
+}
+
+#portfolio .text {
+   top: 150%;
+}
+
+#portfolio .image img {
+   transition: 0.5s;
+}
+
+#portfolio .image:hover img {
+   transform: scale(1.2);
+}
+
+#portfolio .image .layer {
+   transition: all 0.5s 0.3s;
+}
+
+#portfolio .image:hover .layer {
+   opacity: 1 !important;
+}
+
+#portfolio .image .text {
+   transition: top 0.5s 0.2s;
+   color: #fff;
+}
+
+#portfolio .image:hover .text {
+   top: 50%;
+}
+
+#blog {
+   background-color: var(--section-color);
+}
+
+#home .text h1::after{
+   content: " ";
+   animation: tyipng 4s infinite;
+}
+
+@keyframes tyipng {
+   0%{
+       content: "Ke|";
+   }
+   10%{
+       content: "Kerr |";
+   }
+   20%{
+       content: "Kerri D|";
+   }
+   30%{
+       content: "Kerri De|";
+   }
+   40%{
+       content: "Kerri Deo.|";
+   }
+   50%{
+       content: "Kerri De|";
+   }
+   60%{
+       content: "Kerri D.|";
+   }
+   70%{
+       content: "Kerri |";
+   }
+   80%{
+       content: "Ker|";
+   }
+   90%{
+       content: "K|";
+   }
+   100%{
+       content: " |";
+   }
+  
+}
